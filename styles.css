@@ -168,7 +168,6 @@ header h1 {
 }
 
 .footermenu ul {
-  list-style: 0;
   padding: 0;
   margin: 0;
   display: flex;
