@@ -1,0 +1,263 @@
+body {
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+  padding: 0;
+  }
+
+header {
+  background: url("bg.jpg") no-repeat center center/cover;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #735440;
+  }
+  
+header h1 {
+  font-size: 48px;
+  margin: 0;
+  }
+  
+.headerimage {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 150px;
+  height: auto;
+  margin-left: 150px;
+}
+
+.btn {
+  background-color: #57984C;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: 0;
+  margin-top: 50px;
+}
+  
+.section {
+  background-color: #f7f7f7;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+}
+  
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  background: url("Union.png") no-repeat center center/cover;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+  
+.content > div {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  gap: 30px;
+  color: #324950;
+  font-size: 20px;
+}
+
+.content > div:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.contentimg{
+  width: 540px; 
+  height: 500px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.content h1 {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 64px;
+  font-weight: bold;
+  color: #324950;
+}
+
+.content h2 {
+  color: #57984C;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.activities {
+  display: flex;
+  justify-content: space-around;
+  background-color: #EDEDED;
+  padding: 30px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+  
+.activities > div {
+  max-width: 300px;
+  margin: 20px;
+  text-align: center;
+  color: #324950;
+  font-size: 18px;
+}
+
+.activities h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 64px;
+  font-weight: bold;
+  color: #324950;
+}
+
+.activities h2 {
+  color: #57984C;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.activities h3 {
+  color: #57984C;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.activitiesimg {
+  width: 350px; 
+  height: 350px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.green-line {
+  width: 180px;
+  height: 1px;
+  background-color: #4B8A3D; 
+  border: 0;
+  margin: 5px auto;
+}
+
+.footer {
+  background-color: #324950;
+  color: #B9B9B9;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.footermenu{
+  display: flex;
+  background-color: #2D3F45;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.footermenu ul {
+  list-style: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footermenu li {
+  display: inline;
+}
+
+.footermenu a {
+  text-decoration: 0;
+  color: #FFFFFF;
+
+}
+
+.footerimages {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  right: 20px;
+}
+
+.footerimages a img {
+  width: 30px;
+  height: 30px;
+}
+
+.menu {
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+}
+
+.menuitem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu a {
+  display: inline-block;
+  text-decoration: 0; 
+}
+
+.menu p {
+  font-size: 20px;
+  color: #324950;
+}
+
+.search {
+  position: absolute;
+  top: 20px;
+  right: 120px;
+  display: flex;
+  border-bottom: 1px solid #324950;
+  width: 300px;
+  background-color: transparent;
+}
+
+.searchinput {
+  border: 0;
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  background: transparent;
+}
+
+.searchbtn {
+  background: transparent;
+  border: 0;
+  padding: 5px;
+}
+
+.searchlinks {
+  position: absolute;
+  top: 70px;
+  right: 120px;
+  display: flex;
+  gap: 15px;
+}
+
+.searchlinks a {
+  color: #324950;
+  font-size: 18px;
+  text-decoration: 0;
+}
