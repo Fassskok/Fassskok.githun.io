@@ -25,6 +25,13 @@ header.tomatoall {
   padding-top: 100px;
 }
 
+header.contactus {
+  background: url("img/bgconatct.jpg") no-repeat center center/cover;
+  margin-top: 60px;
+  height: 350px;
+  padding-top: 100px;
+}
+
 header h1 {
   font-size: 48px;
   margin: 0;
@@ -185,7 +192,8 @@ header h1 {
   margin-bottom: 0px;
 }
 
-.activities h3 {
+.activities h3,
+.address h3 {
   color: #57984C;
   font-size: 24px;
   text-align: center;
@@ -294,13 +302,16 @@ header h1 {
   padding: 2% 15px;
 }
 
+.addressheader h1,
 .tomatosection h1{
+  margin-top: 0px;
   margin-bottom: 20px;
   font-size: 44px;
   font-weight: bold;
   color: #324950;
 }
 
+.addressheader h2,
 .tomatosection h2{
   color: #57984C;
   font-size: 18px;
@@ -416,7 +427,6 @@ header h1 {
 .wrapper {
   background-color: #f7f7f7;
   margin-top: 5%;
-
 }
 
 .wrapper h1{
@@ -512,3 +522,98 @@ ul li::marker {
   text-decoration: 0;
 }
 
+.address {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+  padding: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.contactus{
+  background-color: #F7F7F7;
+}
+
+.formgroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.formgroup label {
+  color: #324950;
+  margin-bottom: 5px;
+}
+
+.contactform {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.contactform h1 {
+  color: #324950;
+  font-size: 44px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.addresslayout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.addresscontent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1100px;
+  width: 100%;
+  gap: 30px;
+}
+
+.addresscolumnleft,
+.addresscolumnright {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+  margin-top: 2%;
+}
+
+.inputgroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #324950;
+}
+
+input, select, textarea {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.addressheader {
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  text-align: left;
+}
+
+input[type="submit"] {
+  width: 200px;
+  height: 50px; 
+  background-color: #57984C;
+  color: white;
+  font-size: 18px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
