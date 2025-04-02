@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="responsive.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
 <body>
@@ -41,120 +42,61 @@
 
 <div class="tomatosectionwrapper">
 <section class="tomatosection">
-  <h1>Agridera Fresh Market Tomato Hybrids</h1>
+  <h1>Agridera Fresh Market Potato Hybrids</h1>
   <h2>×××××</h2>
   <div>
-    <p>Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of tomato seeds. <b>We invest intensively in research and development to provide 
-      solutions to growers and consumers in numerous countries around the world.</b> In particular, we breed improved disease-resistant cultivars adapted to different markets globally</p>
-    <p>Currently, emphasis is placed on combining Tomato Yellow Leaf Curl Virus (TYLCV) and Tomato Spotted Wilt Virus (TSWV) resistances with other soil borne diseases into superior 
-      tomato breeding lines and hybrids. Moreover, comprehensive efforts are being undertaken to develop varieties resistance to TBRFV virus (Tomato Brown Rugose Fruit Virus). </p>
-    <p>In terms of horticultural traits, breeding is for earliness, different fruit sizes, firmness, red fruit color, flavor, crack resistance, shelf life, 
-      and high/low temperature fruit set. Combinations of quality features and disease resistance are sought in a variety of types, namely round and elongated shapes. </p>
+    <p>Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of potato seeds. We invest intensively in research and development to provide 
+      solutions to growers and consumers in numerous countries worldwide. In particular, we breed improved disease-resistant cultivars adapted to different markets globally.</p>
+    <p>Currently, emphasis is placed on combining resistance to late blight (Phytophthora infestans) and potato virus Y (PVY) with other soil-borne diseases into superior potato breeding lines 
+      and hybrids. Moreover, comprehensive efforts are being undertaken to develop varieties resistant to potato cyst nematodes (Globodera rostochiensis and Globodera pallida). </p>
+    <p>In terms of horticultural traits, breeding focuses on early ripening, different tuber sizes, firmness, high starch content, disease resistance, long storage life, and adaptability to 
+      various climatic conditions. Combinations of quality features and disease resistance are sought in a variety of types, including round, oval, and elongated tuber shapes. </p>
   </div>
   <div class="highlightedtext">
-    <p>Agirdera Tomato breeding programs are focusing on three main segments: 
-    Greenhouse Indeterminate Tomatoes, Open-field Indeterminate Tomatoes, 
-    and Bush Type Open-field Tomatoes.</p>
+    <p>Agridera’s potato breeding programs focus on three main segments: Greenhouse Potatoes, Open-field Indeterminate Potatoes, and Bush Type Open-field Potatoes.</p>
   </div>
 
   <div class="tomatocontainer">
     <div class="tomatocolumn">
-        <h3>Greenhouse Tomato Breeding Program</h3>
+        <h3>Greenhouse Potato Breeding Program</h3>
         <hr>
-        <p><b>This breeding is aimed for the Spanish and Turkish markets.</b> For single and cluster picks, round fruit shape and resistances of TYLCV, TSWV, Nematodes and FORL (Fusarium oxysporum f.sp. radicis-lycopersici). Some hybrids may include more resistances, such as Cladosporium and Leveillula Taurica (Lv).</p>
+        <p><b>This breeding is aimed at the Spanish and Turkish markets.</b> The focus is on early-maturing varieties with resistance to late blight (Phytophthora infestans), potato virus Y 
+          (PVY), and nematodes. Some hybrids may include more resistances, such as Fusarium spp. and Verticillium wilt.</p>
     </div>
 
     <div class="tomatocolumn">
-        <h3>Open-field Indeterminate Tomatoes</h3>
+        <h3>Open-field Indeterminate Potatoes</h3>
         <hr>
-        <p><b>This breeding is for Brazilian, Moroccan, and Turkish markets.</b> The main focus is on large round shape fruits (200 grams plus); and resistances of TYLCV, TSWV, Nematodes and FORL. In the near future, F3 (Fusarium oxysporum f.sp. lycopersici) will be included as basic resistance in our cultivars.</p>
+        <p><b>This breeding is for Brazilian, Moroccan, and Turkish markets.</b> The main focus is on high-yielding, large tuber varieties (200 grams plus) with resistances 
+          to late blight, PVY, nematodes, and Fusarium wilt. In the near future, resistance to bacterial wilt (Ralstonia solanacearum) will be included as a standard trait in our cultivars.</p>
     </div>
 
     <div class="tomatocolumn">
-        <h3>Open-field Bush Type Tomatoes</h3>
+        <h3>Open-field Bush Type Potatoes</h3>
         <hr>
-        <p><b>This breeding is for Mediterranean markets.</b> We breed round and elongated shapes, standard sizes (140-180 grams), and beef sizes (min. 180 grams up to 300 grams and more). We combine the resistances of TYLCV, TSWV and Nematodes as basic resistances in our hybrids. However, some hybrids may include more resistances, such as Cladosporium and Leveillula Taurica (Lv).</p>
+        <p><b>This breeding is for Mediterranean markets.</b> We breed round and elongated tubers, standard sizes (140-180 grams), and starch-rich varieties (180 grams and above). 
+          Our hybrids combine resistance to late blight, PVY, and nematodes, with some also featuring protection against Rhizoctonia solani and common scab (Streptomyces scabies).</p>
     </div>
 
 </div>
   <div class="highlightedtext">
-    <p>Agridera operates through international and local distributers around the world.</p>
+    <p>Agridera operates through international and local distributors around the world.</p>
   </div>
 
-  <div class="image-grid">
-    <div class="card">
-      <a href="tomatoone.html">
-        <img src="img/tomato/tomato1.png">
-        <div class="text">
-          <h1>TAG 1000 (TAG 853)</h1> 
-          <p>Tomato Determinate Red Standard Round</p>
+  <div id="app">
+    <div class="image-grid">
+        <div class="card" v-for="product in products" :key="product.id">
+            <a :href="'tomatoone.html#' + product.id">
+                <img :src="product.image" :alt="product.title">
+                <div class="text">
+                    <h1>{{ product.title }}</h1>
+                    <p>{{ product.short_text }}</p>
+                </div>
+            </a>
         </div>
-      </a>
     </div>
-    <div class="card">
-      <a href="tomatoone.html">
-        <img src="img/tomato/tomato2.png">
-        <div class="text">
-          <h1>TAG 1001 (TAG 855)</h1> 
-          <p>Tomato Determinate Red Standard Round</p>
-        </div>
-      </a>
-    </div>
-    <div class="card">
-      <a href="tomatoone.html">
-        <img src="img/tomato/tomato3.png">
-        <div class="text">
-          <h1>TAG 1002 (TAG 809)</h1> 
-          <p>Tomato Determinate Red Standard Round</p>
-        </div>
-      </a>
-    </div>
-    <div class="card">
-      <a href="tomatoone.html">
-        <img src="img/tomato/tomato4.png">
-        <div class="text">
-          <h1>TAG 1003 (TAG 834 )</h1> 
-          <p>Tomato Determinate Red Standard Round</p>
-        </div>
-      </a>
-    </div>
-    <div class="card">
-      <a href="tomatoone.html">
-        <img src="img/tomato/tomato5.png">
-        <div class="text">
-          <h1>TAG 1004 (TAG 848)</h1> 
-          <p>Tomato Determinate Red BEEF Round</p>
-        </div>
-      </a>
-    </div>
-    <div class="card">
-      <a href="tomatoone.html">
-        <img src="img/tomato/tomato6.png">
-        <div class="text">
-          <h1>TAG 1005 (TAG 800)</h1> 
-          <p>Tomato Determinate Red Standard Round</p>
-        </div>
-      </a>
-    </div>
-    <div class="card">
-      <a href="tomatoone.html">
-        <img src="img/tomato/tomato7.png">
-        <div class="text">
-          <h1> TAG 1006 (TAG 898)</h1> 
-          <p>Tomato Determinate Red Elongated</p>
-        </div>
-      </a>
-    </div>
-    <div class="card">
-      <a href="tomatoone.html">
-        <img src="img/tomato/tomato8.png">
-        <div class="text">
-          <h1>TAG 1007 (TAG 816)</h1> 
-          <p>Tomato Determinate Red Elongated</p>
-        </div>
-      </a>
-    </div>
-  </div>
+</div>
+
 </section>
 </div>
 
@@ -182,6 +124,6 @@
   <footer class="footer">
     <p>AGRIDERA SEEDS & AGRICULTURE LTD. В© 2020</p>
   </footer>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
