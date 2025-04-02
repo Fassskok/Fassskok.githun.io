@@ -20,7 +20,7 @@ header.home {
 }
 
 header.tomatoall {
-  background: url("img/bgtomato.png") no-repeat center center/cover;
+  background: url("img/potato/bgpotato.jpg") no-repeat center center/cover;
   height: 400px;
   padding-top: 100px;
 }
@@ -296,7 +296,7 @@ header h1 {
 }
 
 .tomatosectionwrapper {
-  background-color: #FCF0F0;
+  background-color: #fcf2e1;
   width: 100%;
   padding: 2% 15px;
 }
@@ -342,7 +342,7 @@ header h1 {
   gap: 20px;
   color: #324950;
   font-size: 20px;
-  background-color: #FFFAFA;
+  background-color: #fcf9f4;
 }
 
 .tomatocolumn {
@@ -406,7 +406,7 @@ header h1 {
 .tomato-content {
   display: flex;
   flex-wrap: wrap;
-  background: url("img/Union2.png") no-repeat center center/cover;
+  background: url("img/potato/potato.png") no-repeat center center/cover;
   flex-direction: column;
   align-items: center;
   gap: 60px;
@@ -424,7 +424,7 @@ header h1 {
 }
 
 .wrapper {
-  background-color: #f7f7f7;
+  background-color: #fcf2e1;
   margin-top: 5%;
 }
 
@@ -450,7 +450,7 @@ header h1 {
 .columnssection {
   display: flex;
   flex-wrap: wrap;
-  background: url("img/Union2.png") no-repeat center center/cover;
+  background: url("") no-repeat center center/cover;
   justify-content: center;
 }
 
@@ -481,7 +481,8 @@ header h1 {
 .addtocart {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin: 0px;
+  padding: 5px 0;
 }
 
 .addtocart img {
