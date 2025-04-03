@@ -39,50 +39,50 @@
   </header>
 
   <div id="app">
-    <section class="contactform">
-      <div class="addressheader">
-        <h1>Contact us</h1>
-        <table class="cart-table" v-if="cart.length > 0">
-          <thead>
-            <tr>
-              <th>Image</th>
-              <th>Title</th>
-              <th>Short Description</th>
-              <th>Remove</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(item, index) in cart" :key="item.id">
-              <td>
-                <img :src="item.image" :alt="item.title" class="mini-img" style="width:50px; height:auto;">
-              </td>
-              <td>{{ item.title }}</td>
-              <td>{{ item.short_text }}</td>
-              <td>
-                <button @click="removeFromCart(index)" class="remove-btn">×</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div v-if="orderSubmitted">
-        <h2>Thank you for your order!</h2>
-        <p><strong>Name:</strong> {{ contactFields.name }}</p>
-        <p><strong>Position:</strong> {{ contactFields.position }}</p>
-        <p><strong>Address:</strong> {{ contactFields.addressLine1 }}</p>
-        <p><strong>City:</strong> {{ contactFields.city }}</p>
-        <p><strong>Country:</strong> {{ contactFields.country }}</p>
-        <p><strong>Telephone:</strong> {{ contactFields.phone }}</p>
-        <p><strong>Email:</strong> {{ contactFields.email }}</p>
-        <p><strong>You are a:</strong> {{ contactFields.role }}</p>
-        <p><strong>If other, please specify:</strong> {{ contactFields.other }}</p>
-      </div>
-
-      <div class="addresslayout" v-else>
-        <div class="addresscontent">
-          <div class="addresscolumnleft">
-            <form @submit.prevent="makeOrder">
+    <div id="app">
+      <section class="contactform">
+        <div class="addressheader">
+          <h1>Contact us</h1>
+          <table class="cart-table" v-if="cart.length > 0">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Short Description</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(item, index) in cart" :key="item.id">
+                <td>
+                  <img :src="item.image" :alt="item.title" class="mini-img" style="width:50px; height:auto;">
+                </td>
+                <td>{{ item.title }}</td>
+                <td>{{ item.short_text }}</td>
+                <td>
+                  <button @click="removeFromCart(index)" class="remove-btn">×</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    
+        <div v-if="orderSubmitted">
+          <h2>Thank you for your order!</h2>
+          <p><strong>Name:</strong> {{ contactFields.name }}</p>
+          <p><strong>Position:</strong> {{ contactFields.position }}</p>
+          <p><strong>Address:</strong> {{ contactFields.addressLine1 }}</p>
+          <p><strong>City:</strong> {{ contactFields.city }}</p>
+          <p><strong>Country:</strong> {{ contactFields.country }}</p>
+          <p><strong>Telephone:</strong> {{ contactFields.phone }}</p>
+          <p><strong>Email:</strong> {{ contactFields.email }}</p>
+          <p><strong>You are a:</strong> {{ contactFields.role }}</p>
+          <p><strong>If other, please specify:</strong> {{ contactFields.other }}</p>
+        </div>
+    
+        <div class="addresslayout" v-else>
+          <form @submit.prevent="makeOrder" class="addresscontent">
+            <div class="addresscolumnleft">
               <div class="inputgroup">
                 <label for="name">Name *</label>
                 <input type="text" id="name" name="name" v-model="contactFields.name" required>
@@ -107,6 +107,9 @@
                 <label for="country">Country</label>
                 <input type="text" id="country" name="country" v-model="contactFields.country">
               </div>
+            </div>
+    
+            <div class="addresscolumnright">
               <div class="inputgroup">
                 <label for="phone">Telephone</label>
                 <input type="tel" id="phone" name="phone" v-model="contactFields.phone">
@@ -133,11 +136,13 @@
                 <input type="text" id="captcha" name="captcha" v-model="contactFields.captcha">
               </div>
               <input type="submit" value="Place Order">
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+    
+    
 
     <section class="address">
       <div>
